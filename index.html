@@ -6,11 +6,15 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="/styles/style.css">
                 <script src="/java/main.js"></script>
+                <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
                 <title>Document</title>
             </head>
             <body>
                 <h1>Hello</h1>
-                <button onclick="clickOMatic();">Click Me!</button>
+                <button id="click">Click Me!</button>
                 
+                <div x-data="{name: ['jeff', 'allie', 'zelda' , 'bob' , 'joe']}">
+                    <button @click="alert(name[Math.floor(Math.random() * 4)] + ' ' + name[1])">Alpine</button>
+                </div>
             </body>
         </html>
